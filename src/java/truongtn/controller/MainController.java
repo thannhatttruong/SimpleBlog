@@ -36,6 +36,7 @@ public class MainController extends HttpServlet {
     private static final String UPDATE_ARTICLE = "UpdateArticleController";
     private static final String POST_COMMENT = "PostCommentController";
     private static final String LOGIN_BY_FB = "LoginFacebookController";
+
     /**
      * /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -59,46 +60,49 @@ public class MainController extends HttpServlet {
                 url = LOGIN;
             } else if (action.equals("LogOut")) {
                 url = LOGOUT;
+            } else if (action.equals("loginByFb")) {
+                url = LOGIN_BY_FB;
+            } else if (action.equals("Register")) {
+                url = REGISTER;
+            } else if (action.equals("continue")) {
+                url = COUNTINUE;
+            } else if (action.equals("register")) {
+                url = REGISTER_PAGE;
+            } else if (action.equals("read")) {
+                url = READ;
+            } else if (action.equals("Send Code")) {
+                url = SEND_CODE;
+            } else if (action.equals("Verify")) {
+                url = ACTIVE;
+            } else if (action.equals("loginPost")) {
+                url = LOGIN_POST;
             } else {
-                HttpSession session = request.getSession();
+                HttpSession session = request.getSession(false);
                 String role = "";
-                if(session != null){
-                    Account acc  = (Account) session.getAttribute("USER");
-                    if(acc != null){
+                if (session != null) {
+                    Account acc = (Account) session.getAttribute("USER");
+                    if (acc != null) {
                         role = acc.getRole();
                     }
-                }        
-                if (role.equals("admin")) {//admin action
-                    if (action.equals("Search")) {
-                        url = SEARCH_ADMIN;
-                    }else if(action.equals("Update Article")){
-                        url = UPDATE_ARTICLE;
+                    if (role.equals("admin")) {//admin action
+                        if (action.equals("Search")) {
+                            url = SEARCH_ADMIN;
+                        } else if (action.equals("Update Article")) {
+                            url = UPDATE_ARTICLE;
+                        }
+                    } else {//user action
+                        if (action.equals("Post Article")) {
+                            url = POST_ARTICLE;
+                        } else if (action.equals("Post Comment")) {
+                            url = POST_COMMENT;
+                        } else if (action.equals("Search")) {
+                            url = SEARCH;
+                        }
                     }
-                } else {//user action
-                    if (action.equals("register")) {
-                        url = REGISTER_PAGE;
-                    } else if (action.equals("Register")) {
-                        url = REGISTER;
-                    } else if (action.equals("continue")) {
-                        url = COUNTINUE;
-                    } else if (action.equals("Search")) {
-                        url = SEARCH;
-                    } else if (action.equals("read")) {
-                        url = READ;
-                    } else if (action.equals("Send Code")) {
-                        url = SEND_CODE;
-                    } else if (action.equals("Verify")) {
-                        url = ACTIVE;
-                    } else if (action.equals("loginPost")) {
-                        url = LOGIN_POST;
-                    } else if (action.equals("Post Article")) {
-                        url = POST_ARTICLE;
-                    }else if(action.equals("Post Comment")){
-                        url = POST_COMMENT;
-                    }else if(action.equals("loginByFb")){
-                        url = LOGIN_BY_FB;
-                    }
+                } else {
+                    url = LOGIN;
                 }
+
             }
         } catch (Exception e) {
             log("Error at MainController: " + e.getMessage());

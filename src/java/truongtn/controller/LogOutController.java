@@ -35,11 +35,9 @@ public class LogOutController extends HttpServlet {
         try {
             HttpSession session = request.getSession();
             Session hiberSession = HibernateUtil.getSessionFactory().getCurrentSession();
-            Account account = (Account)session.getAttribute("USER");
-            System.out.println("username 1: " + account.getName());
+            
             if(session != null){  
-                session.setAttribute("USER", null);
-                System.out.println("session set null");
+                session.removeAttribute("USER");
             }
             
             if(hiberSession.isOpen()){

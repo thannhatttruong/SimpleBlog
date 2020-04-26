@@ -5,6 +5,7 @@
         <group>
             <file>file:/Users/truongtn/Desktop/Desktop/HocTap/Semester5/LAD/Blog_Lab1.2/web/register_user.jsp</file>
             <file>file:/Users/truongtn/Desktop/Desktop/HocTap/Semester5/LAD/Blog_Lab1.2/web/post.jsp</file>
+            <file>file:/Users/truongtn/Desktop/Desktop/HocTap/Semester5/LAD/Blog_Lab1.2/src/java/truongtn/utils/MyToys.java</file>
             <file>file:/Users/truongtn/Desktop/Desktop/HocTap/Semester5/LAD/Blog_Lab1.2/web/welcome.jsp</file>
             <file>file:/Users/truongtn/Desktop/Desktop/HocTap/Semester5/LAD/Blog_Lab1.2/src/java/truongtn/controller/AdminSearchController.java</file>
             <file>file:/Users/truongtn/Desktop/Desktop/HocTap/Semester5/LAD/Blog_Lab1.2/web/register.jsp</file>
@@ -16,6 +17,7 @@
             <file>file:/Users/truongtn/Desktop/Desktop/HocTap/Semester5/LAD/Blog_Lab1.2/src/java/truongtn/controller/LoginController.java</file>
             <file>file:/Users/truongtn/Desktop/Desktop/HocTap/Semester5/LAD/Blog_Lab1.2/src/java/truongtn/controller/ContinueController.java</file>
             <file>file:/Users/truongtn/Desktop/Desktop/HocTap/Semester5/LAD/Blog_Lab1.2/web/index.jsp</file>
+            <file>file:/Users/truongtn/Desktop/Desktop/HocTap/Semester5/LAD/Blog_Lab1.2/src/java/truongtn/utils/APIWrapper.java</file>
             <file>file:/Users/truongtn/Desktop/Desktop/HocTap/Semester5/LAD/Blog_Lab1.2/src/java/truongtn/controller/LogOutController.java</file>
             <file>file:/Users/truongtn/Desktop/Desktop/HocTap/Semester5/LAD/Blog_Lab1.2/web/error.jsp</file>
             <file>file:/Users/truongtn/Desktop/Desktop/HocTap/Semester5/LAD/Blog_Lab1.2/web/logout.jsp</file>
