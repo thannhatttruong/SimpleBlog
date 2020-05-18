@@ -12,9 +12,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import org.hibernate.Session;
-import truongtn.daos.AccountDAO;
 import truongtn.daos.ArticleDAO;
-import truongtn.entity.Account;
 import truongtn.entity.Article;
 import truongtn.utils.HibernateUtil;
 

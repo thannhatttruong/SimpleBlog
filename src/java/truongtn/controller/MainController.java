@@ -102,7 +102,6 @@ public class MainController extends HttpServlet {
                 } else {
                     url = LOGIN;
                 }
-
             }
         } catch (Exception e) {
             log("Error at MainController: " + e.getMessage());
