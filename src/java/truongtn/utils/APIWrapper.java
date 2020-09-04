@@ -43,8 +43,11 @@ public class APIWrapper {
                 + "&redirect_uri=%s"
                 + "&code=%s";
         accessTokenLink = String.format(accessTokenLink, appID, appSecret, redirectUrl, code);
+        System.out.println("Accesstoken link: " + accessTokenLink);
         String result = NetUtils.GetReusult(accessTokenLink);
         String token = result.substring(result.indexOf(":") + 2, result.indexOf(",") - 1);
+        System.out.println("Result: " + result);
+        System.out.println("Token: " + token);
         return token;
     }
     

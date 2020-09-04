@@ -34,7 +34,6 @@ public class ContinueController extends HttpServlet {
             ArticleDAO dao = new ArticleDAO();
             Article[] articlerArr = dao.getArticles();
             request.setAttribute("LIST", articlerArr);
-            
         } catch (Exception e) {
             log("Error at ContinueController: " + e.getMessage());
         } finally{
